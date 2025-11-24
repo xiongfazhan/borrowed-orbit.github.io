@@ -29,26 +29,64 @@
   </header>
 
   <main class="site-content">
-    <section class="post-list">
-  
-    <article class="post-preview">
-      <header class="post-header">
-        <h2 class="post-title">
-          <a href="/borrowed-orbit.github.io/2025/11/24/about-who-i-am/">关于我是谁，以及为什么在这里</a>
-        </h2>
-        <div class="post-meta">
-          <span class="post-date">2025-11-24</span>
-        </div>
-      </header>
-      <div class="post-excerpt">
-        <p>按照天文学的说法，我居住在拉尼亚凯亚超星系团的边缘；<br>按照生物学的说法，我是一堆为了生存而编码的蛋白质；<br>但此时此刻，在这个小小的网站里，我只是一个正在看着屏幕、试图与你产生连接的意识。</p>
+    <article class="post-full">
+  <header class="post-header">
+    <h1 class="post-title">关于我是谁，以及为什么在这里</h1>
+    <div class="post-meta">
+      <span class="post-date">2025-11-24</span>
+      
+        <span class="post-category">
+          in 
+          
+            <a href="/borrowed-orbit.github.io/categories/The-Candle/">The Candle</a>
+          
+        </span>
+      
+    </div>
+  </header>
+
+  <div class="post-content">
+    <p>按照天文学的说法，我居住在拉尼亚凯亚超星系团的边缘；<br>按照生物学的说法，我是一堆为了生存而编码的蛋白质；<br>但此时此刻，在这个小小的网站里，我只是一个正在看着屏幕、试图与你产生连接的意识。</p>
 <p>欢迎来到我的临时观察站。<br>这里不售卖真理，只分享惊奇。</p>
-      </div>
-    </article>
+<span id="more"></span>
+
+<h2 id="借宿的规则"><a href="#借宿的规则" class="headerlink" title="借宿的规则"></a>借宿的规则</h2><p>这是一个在数字荒原里供灵魂休憩的避难所。<br>我们源于星尘，拥有意识，只是暂时以碳基生命的形态“借宿”在地球上。<br>既然是借宿，就带着旅客的好奇和过客的洒脱。</p>
+<p>在这里，时间会流逝得慢一些。<br>没有算法推荐，没有即时推送。<br>只有观测、思考，和偶尔的低语。</p>
+<h2 id="观测日志分区"><a href="#观测日志分区" class="headerlink" title="观测日志分区"></a>观测日志分区</h2><ul>
+<li><strong>【深空望远镜】(The Telescope)</strong>：向外看，理解宇宙的机理。</li>
+<li><strong>【内室烛火】(The Candle)</strong>：向内看，审视灵魂的纹理。</li>
+<li><strong>【路边野餐】(Roadside Picnic)</strong>：既然来都来了，不如坐下喝杯茶。</li>
+</ul>
+<p>愿你在这里找到片刻的安宁。</p>
+
+  </div>
   
-</section>
+  <div class="slow-comments">
+    <h3>Slow Comments (信件投递处)</h3>
+    <p>这里没有即时评论。你可以写下一封信，它将以光速的几分之一飘向博主。</p>
+    <div class="letter-box">
+      <textarea placeholder="亲爱的观测者..." rows="6"></textarea>
+      <button id="send-letter">寄出信件</button>
+    </div>
+    <div id="letter-message" style="display:none; margin-top:1rem; color: var(--accent-color);">
+      您的信件已寄出，博主正在数光年外查收。
+    </div>
+  </div>
+</article>
 
-
+<script>
+  document.getElementById('send-letter').addEventListener('click', function() {
+    const msg = document.getElementById('letter-message');
+    const btn = this;
+    btn.disabled = true;
+    btn.innerText = '寄送中...';
+    setTimeout(() => {
+      btn.style.display = 'none';
+      msg.style.display = 'block';
+      document.querySelector('.letter-box textarea').value = '';
+    }, 2000);
+  });
+</script>
 
   </main>
 
