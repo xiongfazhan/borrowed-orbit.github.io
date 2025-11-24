@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodging on Earth | 在宏大的虚无中，捡拾微小的意义。</title>
+  <link rel="stylesheet" href="/borrowed-orbit.github.io/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+  <div id="particle-container"></div>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title"><a href="/borrowed-orbit.github.io/">Lodging on Earth</a></h1>
+      <p class="site-subtitle">在宏大的虚无中，捡拾微小的意义。</p>
+      <nav class="site-nav">
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/">Home</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Telescope">The Telescope</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Candle">The Candle</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/Roadside-Picnic">Roadside Picnic</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/now">Now / 此刻</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <article class="page-full">
+  <header class="page-header">
+    <h1 class="page-title">Now / 此刻</h1>
+  </header>
+
+  <div class="page-content">
+    <blockquote>
+<p>最后更新：2025-11-24（UTC+8）</p>
+</blockquote>
+<h3 id="正在做的事"><a href="#正在做的事" class="headerlink" title="正在做的事"></a>正在做的事</h3><ul>
+<li>搭建并打磨「借宿地球」的第一版深空观察站。</li>
+<li>整理三大分区的“奠基文”，为后续长期写作定下基调。</li>
+</ul>
+<h3 id="正在读-看"><a href="#正在读-看" class="headerlink" title="正在读 &#x2F; 看"></a>正在读 &#x2F; 看</h3><ul>
+<li>《三体》</li>
+<li>零散的宇宙学、计算机科学与哲学材料。</li>
+</ul>
+<h3 id="正在听"><a href="#正在听" class="headerlink" title="正在听"></a>正在听</h3><ul>
+<li>白噪音：雨声、篝火声，适合作为深夜写作的背景。</li>
+</ul>
+<h3 id="最近在想什么"><a href="#最近在想什么" class="headerlink" title="最近在想什么"></a>最近在想什么</h3><ul>
+<li>宇宙如果本质上是“死的物理过程”，为什么我们会在其中体验到如此强烈的意义感？</li>
+<li>个人博客在 2025 年还是否有存在的必要，以及它和社交媒体的根本区别。</li>
+</ul>
+<hr>
+<p>这不是「关于我」页面，而是一个<strong>临时的状态快照</strong>。</p>
+<p>如果你是在很久以后的某一天看到这里，请默认：</p>
+<ul>
+<li>上面写的内容<strong>很可能已经过期</strong>；</li>
+<li>但那个在某个夜晚坐在屏幕前、想把这些写下来的我，曾经确实存在过。</li>
+</ul>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 借宿者</p>
+      <p>已抵达观测边界 · <a href="/borrowed-orbit.github.io/neighbors">Neighbors / 邻居</a> · <a href="/borrowed-orbit.github.io/colophon">Colophon</a> · <a href="/borrowed-orbit.github.io/timeline">Timeline / 观测记录</a></p>
+      <div class="ambient-switch">
+        <label for="ambient-toggle">Ambient Mode</label>
+        <input type="checkbox" id="ambient-toggle">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ambient Audio -->
+  <audio id="ambient-audio" loop>
+    <!-- Placeholder for white noise/deep space sound. -->
+    <!-- You would need a real file here. For now, I'll leave it empty or put a dummy src -->
+    <source src="https://actions.google.com/sounds/v1/ambiences/deep_space.ogg" type="audio/ogg">
+  </audio>
+
+  <script>
+    // Particle Trail Effect
+    document.addEventListener('mousemove', function(e) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = e.pageX + 'px';
+      particle.style.top = e.pageY + 'px';
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 1000);
+    });
+
+    // Ambient Mode
+    const toggle = document.getElementById('ambient-toggle');
+    const audio = document.getElementById('ambient-audio');
+    
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        audio.volume = 0.2;
+        audio.play().catch(e => console.log("Audio play failed:", e));
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodging on Earth | 在宏大的虚无中，捡拾微小的意义。</title>
+  <link rel="stylesheet" href="/borrowed-orbit.github.io/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+  <div id="particle-container"></div>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title"><a href="/borrowed-orbit.github.io/">Lodging on Earth</a></h1>
+      <p class="site-subtitle">在宏大的虚无中，捡拾微小的意义。</p>
+      <nav class="site-nav">
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/">Home</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Telescope">The Telescope</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Candle">The Candle</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/Roadside-Picnic">Roadside Picnic</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/now">Now / 此刻</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <article class="page-full">
+  <header class="page-header">
+    <h1 class="page-title">发送信号 / Send a Signal</h1>
+  </header>
+
+  <div class="page-content">
+    <blockquote>
+<p>这里没有即时消息，只有在宇宙背景辐射里漂浮的慢速信号。</p>
+</blockquote>
+<p>如果你对某篇文章有共鸣，或者只是想分享一张你看到的晚霞，欢迎给我写信。</p>
+<p>我会像查收来自遥远星系的信号一样对待它，不一定会很快回复，但一定会认真阅读。</p>
+<ul>
+<li>📡 Email：<a href="mailto:&#99;&#118;&#x70;&#114;&#x74;&#101;&#x72;&#64;&#49;&#x36;&#51;&#46;&#x63;&#111;&#109;">cvprter@163.com</a></li>
+</ul>
+<p>你也可以什么都不说，只发来一句话、一张照片、或者一个让你久久不能忘怀的瞬间。</p>
+<p>谢谢你愿意把这束信号，从你的坐标系，发射到我的这颗小小行星上。</p>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 借宿者</p>
+      <p>已抵达观测边界 · <a href="/borrowed-orbit.github.io/neighbors">Neighbors / 邻居</a> · <a href="/borrowed-orbit.github.io/colophon">Colophon</a> · <a href="/borrowed-orbit.github.io/timeline">Timeline / 观测记录</a></p>
+      <div class="ambient-switch">
+        <label for="ambient-toggle">Ambient Mode</label>
+        <input type="checkbox" id="ambient-toggle">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ambient Audio -->
+  <audio id="ambient-audio" loop>
+    <!-- Placeholder for white noise/deep space sound. -->
+    <!-- You would need a real file here. For now, I'll leave it empty or put a dummy src -->
+    <source src="https://actions.google.com/sounds/v1/ambiences/deep_space.ogg" type="audio/ogg">
+  </audio>
+
+  <script>
+    // Particle Trail Effect
+    document.addEventListener('mousemove', function(e) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = e.pageX + 'px';
+      particle.style.top = e.pageY + 'px';
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 1000);
+    });
+
+    // Ambient Mode
+    const toggle = document.getElementById('ambient-toggle');
+    const audio = document.getElementById('ambient-audio');
+    
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        audio.volume = 0.2;
+        audio.play().catch(e => console.log("Audio play failed:", e));
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>

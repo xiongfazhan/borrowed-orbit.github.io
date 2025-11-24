@@ -8,7 +8,20 @@
 
 body {
   background-color: var(--bg-color);
-  background-image: url('../images/bg.png');
+  /* 多层背景：星云底图 + 星光团 + 舷窗暗角 */
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.13), transparent 55%),
+    radial-gradient(circle at 15% 78%, rgba(255, 255, 255, 0.10), transparent 55%),
+    radial-gradient(circle at 85% 82%, rgba(255, 255, 255, 0.08), transparent 55%),
+    /* 舷窗暗角：中间亮、四周略暗 */
+    /* 把暗角稍微减弱一点 */
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.35) 60%,
+      rgba(0, 0, 0, 0.75) 100%
+    ),
+    url('../images/bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -89,6 +102,16 @@ a:hover {
   padding-bottom: 2rem;
 }
 
+/* Cover images inside excerpts on index/category pages */
+.post-excerpt img {
+  display: block;
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 auto 1.5rem;
+}
+
 .post-title {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
@@ -122,6 +145,16 @@ a:hover {
 
 .post-content p {
   margin-bottom: 1.5rem;
+}
+
+/* Post cover: treat the first image as a porthole window */
+.post-content > p:first-child img {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 auto 2rem;
 }
 
 .post-content blockquote {
@@ -181,6 +214,13 @@ a:hover {
   padding-top: 2rem;
   border-top: 1px dashed var(--secondary-color);
   text-align: center;
+}
+
+.signal-link {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
 }
 
 .letter-box textarea {

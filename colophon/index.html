@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodging on Earth | 在宏大的虚无中，捡拾微小的意义。</title>
+  <link rel="stylesheet" href="/borrowed-orbit.github.io/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+  <div id="particle-container"></div>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title"><a href="/borrowed-orbit.github.io/">Lodging on Earth</a></h1>
+      <p class="site-subtitle">在宏大的虚无中，捡拾微小的意义。</p>
+      <nav class="site-nav">
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/">Home</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Telescope">The Telescope</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Candle">The Candle</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/Roadside-Picnic">Roadside Picnic</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/now">Now / 此刻</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <article class="page-full">
+  <header class="page-header">
+    <h1 class="page-title">Colophon / 技术与偏好</h1>
+  </header>
+
+  <div class="page-content">
+    <blockquote>
+<p>这一页是给好奇的人看的：这座「借宿地球」观测站，是怎么被搭起来的，以及它打算如何在宇宙尘埃里长时间运行。</p>
+</blockquote>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
+<li><strong>生成器</strong>：Hexo 8.x  </li>
+<li><strong>主题</strong>：自定义主题 <code>lodging</code>（深空背景 + 粒子拖尾 + 慢速评论 + Ambient Mode）  </li>
+<li><strong>部署</strong>：GitHub Pages · 仓库 <code>borrowed-orbit.github.io</code></li>
+</ul>
+<p>我希望这个站点尽量保持：</p>
+<ul>
+<li>依赖简单，可长时间维护；</li>
+<li>不依赖数据库，所有内容都是可以被 git 版本控制的纯文本；</li>
+<li>即使很久不更新，几年后 <code>git clone</code> + 一条命令也能重新跑起来。</li>
+</ul>
+<h2 id="写作偏好"><a href="#写作偏好" class="headerlink" title="写作偏好"></a>写作偏好</h2><ul>
+<li><strong>介质</strong>：Markdown 为主，尽量少图，多文字；</li>
+<li><strong>节奏</strong>：不追热点，也不会为流量刻意调整选题；</li>
+<li><strong>时间</strong>：大部分文字会在深夜或清晨完成，此时世界比较安静；</li>
+<li><strong>语言</strong>：以中文为主，偶尔会引用英文术语和原始表述。</li>
+</ul>
+<h2 id="站点小规则（暂定）"><a href="#站点小规则（暂定）" class="headerlink" title="站点小规则（暂定）"></a>站点小规则（暂定）</h2><ol>
+<li><p><strong>不卖广告</strong><br>这里不会出现闪烁的横幅、浮动的推广位，也不会有隐蔽的软广。</p>
+</li>
+<li><p><strong>不做 SEO 体操</strong><br>文章标题会尽量贴近内容，而不是贴近搜索引擎。</p>
+</li>
+<li><p><strong>旧文不删，只加后记</strong><br>如果将来的我不同意现在的自己，我会在文末写一段后记，而不是把它抹去。</p>
+</li>
+<li><p><strong>不追更新频率 KPI</strong><br>有话要说的时候才写，没有的时候就安静地生活。</p>
+</li>
+<li><p><strong>尊重慢速交流</strong><br>评论区是「Slow Comments」，还有一个单独的「发送信号」页面。这里欢迎认真、缓慢的反馈，不欢迎吵架。</p>
+</li>
+</ol>
+<hr>
+<p>如果有一天你发现这个页面更新了很多次，那大概说明：</p>
+<blockquote>
+<p>我依然在维护这座小小的「深空建筑」，并且还在学习如何更好地栖居于此。</p>
+</blockquote>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 借宿者</p>
+      <p>已抵达观测边界 · <a href="/borrowed-orbit.github.io/neighbors">Neighbors / 邻居</a> · <a href="/borrowed-orbit.github.io/colophon">Colophon</a> · <a href="/borrowed-orbit.github.io/timeline">Timeline / 观测记录</a></p>
+      <div class="ambient-switch">
+        <label for="ambient-toggle">Ambient Mode</label>
+        <input type="checkbox" id="ambient-toggle">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ambient Audio -->
+  <audio id="ambient-audio" loop>
+    <!-- Placeholder for white noise/deep space sound. -->
+    <!-- You would need a real file here. For now, I'll leave it empty or put a dummy src -->
+    <source src="https://actions.google.com/sounds/v1/ambiences/deep_space.ogg" type="audio/ogg">
+  </audio>
+
+  <script>
+    // Particle Trail Effect
+    document.addEventListener('mousemove', function(e) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = e.pageX + 'px';
+      particle.style.top = e.pageY + 'px';
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 1000);
+    });
+
+    // Ambient Mode
+    const toggle = document.getElementById('ambient-toggle');
+    const audio = document.getElementById('ambient-audio');
+    
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        audio.volume = 0.2;
+        audio.play().catch(e => console.log("Audio play failed:", e));
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>

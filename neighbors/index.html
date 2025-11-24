@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodging on Earth | 在宏大的虚无中，捡拾微小的意义。</title>
+  <link rel="stylesheet" href="/borrowed-orbit.github.io/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+  <div id="particle-container"></div>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title"><a href="/borrowed-orbit.github.io/">Lodging on Earth</a></h1>
+      <p class="site-subtitle">在宏大的虚无中，捡拾微小的意义。</p>
+      <nav class="site-nav">
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/">Home</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Telescope">The Telescope</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Candle">The Candle</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/Roadside-Picnic">Roadside Picnic</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/now">Now / 此刻</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <article class="page-full">
+  <header class="page-header">
+    <h1 class="page-title">Neighbors / 邻居</h1>
+  </header>
+
+  <div class="page-content">
+    <blockquote>
+<p>这里是一座小小的赛博神龛，摆放着我在互联网上遇到的同类星体。</p>
+<p>它不会列出所有链接，只会慎重地摆上一些「如果你喜欢这里，八成也会喜欢那边」的地方。</p>
+</blockquote>
+<p>（以下是占位示例，等你真的想好要挂谁的时候，可以把它们替换掉。）</p>
+<h3 id="示例邻居们"><a href="#示例邻居们" class="headerlink" title="示例邻居们"></a>示例邻居们</h3><ul>
+<li><p><strong>示例站点 A</strong><br>这里有全网最温柔的技术文章，像在深夜给你读文档的人。</p>
+</li>
+<li><p><strong>示例站点 B</strong><br>他的文字像手术刀一样冷峻，却总能切开一些我们不敢直视的部分。</p>
+</li>
+<li><p><strong>示例站点 C</strong><br>偶尔更新，但每一篇都像瓶中信，从另一个安静星球飘来。</p>
+</li>
+</ul>
+<hr>
+<p>将来如果你想把某个人、某个站点郑重地「请进来」，就把它写在这里。</p>
+<p>如果你发现自己在这里流连的时间越来越长，那说明：</p>
+<blockquote>
+<p>你可能已经悄悄搬进了这条小小的「邻里星带」。</p>
+</blockquote>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 借宿者</p>
+      <p>已抵达观测边界 · <a href="/borrowed-orbit.github.io/neighbors">Neighbors / 邻居</a> · <a href="/borrowed-orbit.github.io/colophon">Colophon</a> · <a href="/borrowed-orbit.github.io/timeline">Timeline / 观测记录</a></p>
+      <div class="ambient-switch">
+        <label for="ambient-toggle">Ambient Mode</label>
+        <input type="checkbox" id="ambient-toggle">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ambient Audio -->
+  <audio id="ambient-audio" loop>
+    <!-- Placeholder for white noise/deep space sound. -->
+    <!-- You would need a real file here. For now, I'll leave it empty or put a dummy src -->
+    <source src="https://actions.google.com/sounds/v1/ambiences/deep_space.ogg" type="audio/ogg">
+  </audio>
+
+  <script>
+    // Particle Trail Effect
+    document.addEventListener('mousemove', function(e) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = e.pageX + 'px';
+      particle.style.top = e.pageY + 'px';
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 1000);
+    });
+
+    // Ambient Mode
+    const toggle = document.getElementById('ambient-toggle');
+    const audio = document.getElementById('ambient-audio');
+    
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        audio.volume = 0.2;
+        audio.play().catch(e => console.log("Audio play failed:", e));
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>

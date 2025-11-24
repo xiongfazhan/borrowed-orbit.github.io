@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodging on Earth | 在宏大的虚无中，捡拾微小的意义。</title>
+  <link rel="stylesheet" href="/borrowed-orbit.github.io/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+  <div id="particle-container"></div>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title"><a href="/borrowed-orbit.github.io/">Lodging on Earth</a></h1>
+      <p class="site-subtitle">在宏大的虚无中，捡拾微小的意义。</p>
+      <nav class="site-nav">
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/">Home</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Telescope">The Telescope</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/The-Candle">The Candle</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/categories/Roadside-Picnic">Roadside Picnic</a>
+        
+          <a class="nav-link" href="/borrowed-orbit.github.io/now">Now / 此刻</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <article class="post-full">
+  <header class="post-header">
+    <h1 class="post-title">当你凝视深渊时，深渊在给你讲很久以前的故事</h1>
+    <div class="post-meta">
+      <span class="post-date">2025-11-24</span>
+      
+        <span class="post-category">
+          in 
+          
+            <a href="/borrowed-orbit.github.io/categories/The-Telescope/">The Telescope</a>
+          
+        </span>
+      
+    </div>
+  </header>
+
+  <div class="post-content">
+    <p><img src="/borrowed-orbit.github.io/images/telescope-cover.png" alt="封面图：待补充"></p>
+<p>在这个分区，我们讨论那些比人类寿命长得多的东西。</p>
+<p>天文学里有一个最令我着迷的概念，叫做“回溯时间” (Look-back time)。</p>
+<p>因为光速是有限的（每秒 30 万公里），所以我们永远无法看到宇宙“当下”的模样。<br>你看月亮，看的是 1.3 秒前的月亮；<br>你看太阳，看的是 8 分钟前的太阳；<br>你看那个肉眼可见的仙女座星系，看的是 250 万年前的影像——那时，地球上的人类祖先甚至还没有完全学会直立行走。</p>
+<p>这是一个巨大的宇宙玩笑：<strong>我们被囚禁在“当下”，但我们的感官却只能触及“过去”。</strong></p>
+<p>这也意味着，当我们架起望远镜，我们并不是在向远处看，而是在向<strong>深处</strong>看。这台望远镜，本质上是一台时间机器。它让我们得以在这个混乱、嘈杂的地球表面，通过捕捉那些古老的光子，去拼凑出宇宙诞生的第一声啼哭。</p>
+<p>在这个【深空望远镜】的分区里，我不想讨论明天的股价或下个季度的财报。我想讨论那些跨越了亿万光年才抵达我们视网膜的事物。</p>
+<p>因为在那些宏大的尺度面前，我们当下的焦虑，连一粒尘埃都算不上。</p>
+<p>这里是观测站。<br>观测对象：<strong>客观世界的真理与荒谬。</strong></p>
+
+  </div>
+  
+  <div class="slow-comments">
+    <h3>Slow Comments (信件投递处)</h3>
+    <p>这里没有即时评论。你可以写下一封信，它将以光速的几分之一飘向博主。</p>
+    <div class="letter-box">
+      <textarea placeholder="亲爱的观测者..." rows="6"></textarea>
+      <button id="send-letter">寄出信件</button>
+    </div>
+    <div id="letter-message" style="display:none; margin-top:1rem; color: var(--accent-color);">
+      您的信件已寄出，博主正在数光年外查收。
+    </div>
+  </div>
+  <div class="signal-link">
+    <p>📡 想认真回应这篇文字，可以前往 <a href="/borrowed-orbit.github.io/signal">发送信号</a>。</p>
+  </div>
+</article>
+
+<script>
+  document.getElementById('send-letter').addEventListener('click', function() {
+    const msg = document.getElementById('letter-message');
+    const btn = this;
+    btn.disabled = true;
+    btn.innerText = '寄送中...';
+    setTimeout(() => {
+      btn.style.display = 'none';
+      msg.style.display = 'block';
+      document.querySelector('.letter-box textarea').value = '';
+    }, 2000);
+  });
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 借宿者</p>
+      <p>已抵达观测边界 · <a href="/borrowed-orbit.github.io/neighbors">Neighbors / 邻居</a> · <a href="/borrowed-orbit.github.io/colophon">Colophon</a> · <a href="/borrowed-orbit.github.io/timeline">Timeline / 观测记录</a></p>
+      <div class="ambient-switch">
+        <label for="ambient-toggle">Ambient Mode</label>
+        <input type="checkbox" id="ambient-toggle">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ambient Audio -->
+  <audio id="ambient-audio" loop>
+    <!-- Placeholder for white noise/deep space sound. -->
+    <!-- You would need a real file here. For now, I'll leave it empty or put a dummy src -->
+    <source src="https://actions.google.com/sounds/v1/ambiences/deep_space.ogg" type="audio/ogg">
+  </audio>
+
+  <script>
+    // Particle Trail Effect
+    document.addEventListener('mousemove', function(e) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = e.pageX + 'px';
+      particle.style.top = e.pageY + 'px';
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 1000);
+    });
+
+    // Ambient Mode
+    const toggle = document.getElementById('ambient-toggle');
+    const audio = document.getElementById('ambient-audio');
+    
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        audio.volume = 0.2;
+        audio.play().catch(e => console.log("Audio play failed:", e));
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>
